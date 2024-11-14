@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hero", "Hero\Hero.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enemy", "Enemy\Enemy.csproj", "{6F3AB4FF-02C3-4222-B6E6-9A4CA5892BCD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weapon", "Weapon\Weapon.csproj", "{E1D237ED-EA3C-4D46-933B-F74FA24B7716}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6F3AB4FF-02C3-4222-B6E6-9A4CA5892BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F3AB4FF-02C3-4222-B6E6-9A4CA5892BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F3AB4FF-02C3-4222-B6E6-9A4CA5892BCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1D237ED-EA3C-4D46-933B-F74FA24B7716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1D237ED-EA3C-4D46-933B-F74FA24B7716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1D237ED-EA3C-4D46-933B-F74FA24B7716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1D237ED-EA3C-4D46-933B-F74FA24B7716}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
