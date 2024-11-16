@@ -1,39 +1,35 @@
 ﻿namespace Weapons;
 
 public class Weapon
-{
-    public string Name { get; set; }
-    public int Attack { get; set; }
+{    public string Name
+    {
+        get;
+        set
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value");
+            }
+            else field = value;
+        }
+    }
+
+    public int Attack
+    {
+        get;
+        set
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException("value");
+            }
+            else field = value;
+        }
+    }
 
     public Weapon(string name, int attack)
     {
         this.Name = name;
         this.Attack = attack;
-    }
-}
-public class Staff : Weapon
-{
-    public Staff(string name, int attack) : base(name,attack)
-    {
-        this.Name = name;
-        this.Attack = attack;
-    }
-}
-
-public class Sword : Weapon
-{
-    public Sword(string name, int attack) : base(name,attack)
-    {
-        this.Name = name;
-        this.Attack = attack;
-    }
-}
-
-public class Bow : Weapon
-{
-    public Bow(string name, int attack) : base(name,attack)
-    {
-        this.Name = name;
-        this.Attack = attack; 
     }
 }

@@ -1,0 +1,12 @@
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\bin\Release\net8.0\Hero.deps.json
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\bin\Release\net8.0\Hero.dll
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\bin\Release\net8.0\Hero.pdb
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Release\net8.0\Hero.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Release\net8.0\Hero.AssemblyInfoInputs.cache
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Release\net8.0\Hero.AssemblyInfo.cs
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Release\net8.0\Hero.csproj.CoreCompileInputs.cache
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Release\net8.0\Hero.sourcelink.json
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Release\net8.0\Hero.dll
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Release\net8.0\refint\Hero.dll
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Release\net8.0\Hero.pdb
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Release\net8.0\ref\Hero.dll

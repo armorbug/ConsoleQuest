@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Egm2PWWPCb0=",
+  "dgSpecHash": "KitICXpgdJI=",
   "success": true,
   "projectFilePath": "C:\\Users\\vladi\\OneDrive\\Документи\\GitHub\\ConsoleQuest\\ConsoleQuest\\ConsoleQuest.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\vladi\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.11\\microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\vladi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.11\\microsoft.windowsdesktop.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\vladi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.11\\microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\vladi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.11\\microsoft.netcore.app.host.win-x64.8.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

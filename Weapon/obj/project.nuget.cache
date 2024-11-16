@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "cUtXy5ZBJ2c=",
+  "dgSpecHash": "REaaAVuOL5Q=",
   "success": true,
   "projectFilePath": "C:\\Users\\vladi\\OneDrive\\Документи\\GitHub\\ConsoleQuest\\Weapon\\Weapon.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\vladi\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.11\\microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\vladi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.11\\microsoft.windowsdesktop.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\vladi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.11\\microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

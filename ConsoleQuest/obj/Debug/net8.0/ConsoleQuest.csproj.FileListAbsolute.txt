@@ -19,3 +19,5 @@ C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\ConsoleQuest\obj\
 C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\ConsoleQuest\obj\Debug\net8.0\ref\ConsoleQuest.dll
 C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\ConsoleQuest\bin\Debug\net8.0\Enemy.dll
 C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\ConsoleQuest\bin\Debug\net8.0\Enemy.pdb
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\ConsoleQuest\bin\Debug\net8.0\Weapon.dll
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\ConsoleQuest\bin\Debug\net8.0\Weapon.pdb

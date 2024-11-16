@@ -5,11 +5,13 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Enemy\Enemy.csproj" />
     <ProjectReference Include="..\Hero\Hero.csproj" />
+    <ProjectReference Include="..\Weapon\Weapon.csproj" />
   </ItemGroup>
 
 </Project>
