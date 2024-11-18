@@ -203,7 +203,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\vladi\\OneDrive\\Документи\\GitHub\\ConsoleQuest\\Weapon\\Weapon.csproj": {
+                "projectPath": "C:\\Users\\vladi\\OneDrive\\Документи\\GitHub\\ConsoleQuest\\Weapon\\Weapon.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

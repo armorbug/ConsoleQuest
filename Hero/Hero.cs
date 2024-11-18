@@ -1,7 +1,10 @@
 ﻿namespace Heroes;
 
+using Weapons;
+
 public class Hero
 {
+    protected List<Weapon> weapons = new List<Weapon>();
     public string Name
     {
         get;
@@ -44,7 +47,17 @@ public class Hero
         this.Health = health;
         this.Attack = attack;
         this.Name = name;
+        
     }
 
+    public void AddWeapon(Weapon weapon)
+    {
+        weapons.Add(weapon);
+    }
+
+    public List<Weapon> GetWeapons()
+    {
+        return weapons;
+    }
 
 }

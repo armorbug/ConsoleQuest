@@ -10,3 +10,7 @@ C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\ne
 C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net8.0\refint\Hero.dll
 C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net8.0\Hero.pdb
 C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net8.0\ref\Hero.dll
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\bin\Debug\net8.0\Weapon.dll
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\bin\Debug\net8.0\Weapon.pdb
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net8.0\Hero.csproj.AssemblyReference.cache
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net8.0\Hero.csproj.Up2Date

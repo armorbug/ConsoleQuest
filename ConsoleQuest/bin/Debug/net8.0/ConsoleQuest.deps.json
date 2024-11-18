@@ -25,6 +25,9 @@
         }
       },
       "Hero/1.0.0": {
+        "dependencies": {
+          "Weapon": "1.0.0"
+        },
         "runtime": {
           "Hero.dll": {
             "assemblyVersion": "1.0.0",

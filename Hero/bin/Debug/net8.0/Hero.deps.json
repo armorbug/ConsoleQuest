@@ -7,14 +7,30 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "Hero/1.0.0": {
+        "dependencies": {
+          "Weapon": "1.0.0"
+        },
         "runtime": {
           "Hero.dll": {}
+        }
+      },
+      "Weapon/1.0.0": {
+        "runtime": {
+          "Weapon.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "Hero/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Weapon/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

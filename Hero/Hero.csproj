@@ -7,4 +7,8 @@
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Weapon\Weapon.csproj" />
+  </ItemGroup>
+
 </Project>
