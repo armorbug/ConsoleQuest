@@ -39,11 +39,25 @@ public class Enemy
         }
     }
 
-    public Enemy(string name, int health, int attack)
+    public int Speed
+    {
+        get;
+        set
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException("value");
+            }
+            else field = value;
+        }
+    }
+
+    public Enemy(string name, int health, int attack, int speed)
     {
         this.Health = health;
         this.Attack = attack;
         this.Name = name;
+        this.Speed = speed;
     }
 
 }

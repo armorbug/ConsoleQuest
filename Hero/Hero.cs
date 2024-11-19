@@ -42,12 +42,25 @@ public class Hero
         }
     }
 
-    public Hero(string name, int health, int attack)
+    public int Speed
+    {
+        get;
+        set
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException("value");
+            }
+            else field = value;
+        }
+    }
+
+    public Hero(string name, int health, int attack, int speed)
     {
         this.Health = health;
         this.Attack = attack;
         this.Name = name;
-        
+        this.Speed = speed;
     }
 
     public void AddWeapon(Weapon weapon)
