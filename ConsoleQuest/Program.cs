@@ -1,20 +1,34 @@
 ﻿using Heroes;
 using Enemies;
 using Weapons;
-using System.Runtime.Serialization;
 
 Random random = new Random();
 
 
 Hero hero = new Hero("Heroman", 10, 2, 15);
-Enemy enemy = new Enemy("Enemydude", 15, 2, 15);
 
-Weapon staff = new Weapon("staff", 10);
-Weapon sword = new Weapon("sword", 5);
+
+Weapon staff = new Weapon("staff", 4);
+Weapon sword = new Weapon("sword", 3);
 Weapon bow = new Weapon("bow", 2);
 
 Start(hero);
-Battle(hero, enemy);
+int enemiesDefeated = 0;
+
+//multiple battles until hero dies
+while (hero.Health > 0)
+{
+    //generate random enemies
+    Enemy enemy = new Enemy(string.Format($"Enemydude{enemiesDefeated+1}"),random.Next(10,31),random.Next(1,6),random.Next(10,21));
+    Console.WriteLine($"{enemy.Name}'s stats:\nHealth: {enemy.Health}\nAttack: {enemy.Attack}\nSpeed: {enemy.Speed}\n");
+    Battle(hero, enemy);
+    if (hero.Health > 0) enemiesDefeated++;
+
+    Thread.Sleep(1000);
+}
+
+if (enemiesDefeated > 0) Console.WriteLine($"Well done! You defeated {enemiesDefeated} enemies in a row!");
+else Console.WriteLine("Oh no, you didn't defeat any enemies this time...");
 
 void Battle(Hero hero, Enemy enemy)
 {
@@ -47,8 +61,9 @@ void Battle(Hero hero, Enemy enemy)
             enemy.Health = HeroAttack(hero, enemy);
         }
     }
-    if (hero.Health < 0) Console.WriteLine($"{enemy.Name} won...");
+    if (hero.Health <= 0) Console.WriteLine($"{enemy.Name} won...");
     else Console.WriteLine($"{hero.Name} won!");
+    Console.WriteLine();
 }
 
 void Start(Hero hero)
