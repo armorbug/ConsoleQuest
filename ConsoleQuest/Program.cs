@@ -16,15 +16,21 @@ Start(hero);
 int enemiesDefeated = 0;
 
 //multiple battles until hero dies
-while (hero.Health > 0)
+while (hero.CurrentHealth > 0)
 {
     //generate random enemies
-    Enemy enemy = new Enemy(string.Format($"Enemydude{enemiesDefeated+1}"),random.Next(10,31),random.Next(1,6),random.Next(10,21));
+    Enemy enemy = GenerateRandomEnemy(enemiesDefeated);
     Console.WriteLine($"{enemy.Name}'s stats:\nHealth: {enemy.Health}\nAttack: {enemy.Attack}\nSpeed: {enemy.Speed}\n");
     Battle(hero, enemy);
-    if (hero.Health > 0) enemiesDefeated++;
+    if (hero.CurrentHealth > 0) 
+    {
+        enemiesDefeated++;
+        RestoreHealth(hero, enemiesDefeated/5 + 1); //increases by one for every 5 enemies defeated
+    }
+
 
     Thread.Sleep(1000);
+
 }
 
 if (enemiesDefeated > 0) Console.WriteLine($"Well done! You defeated {enemiesDefeated} enemies in a row!");
@@ -34,7 +40,7 @@ void Battle(Hero hero, Enemy enemy)
 {
     int tiebreaker = -1; 
     //practice battle loop
-    while (hero.Health > 0 && enemy.Health > 0)
+    while (hero.CurrentHealth > 0 && enemy.Health > 0)
     {
         if (hero.Speed == enemy.Speed)
         {
@@ -50,18 +56,18 @@ void Battle(Hero hero, Enemy enemy)
 
             if (enemy.Health <= 0) break;
 
-            hero.Health = EnemyAttack(enemy, hero);
+            hero.CurrentHealth = EnemyAttack(enemy, hero);
         }
         else if (hero.Speed < enemy.Speed || tiebreaker == 1)
         {
-            hero.Health = EnemyAttack(enemy, hero);
+            hero.CurrentHealth = EnemyAttack(enemy, hero);
 
-            if (hero.Health <= 0) break;
+            if (hero.CurrentHealth <= 0) break;
 
             enemy.Health = HeroAttack(hero, enemy);
         }
     }
-    if (hero.Health <= 0) Console.WriteLine($"{enemy.Name} won...");
+    if (hero.CurrentHealth <= 0) Console.WriteLine($"{enemy.Name} won...");
     else Console.WriteLine($"{hero.Name} won!");
     Console.WriteLine();
 }
@@ -103,13 +109,36 @@ int HeroAttack(Hero hero, Enemy enemy)
         damage += weapon.Attack;
     }
     int result = enemy.Health - damage < 0 ? 0 : enemy.Health - damage;
-    Console.WriteLine($"{enemy.Name} took {damage} damage from {hero.Name}. Their health is now {result}.");
+    //Console.WriteLine($"{enemy.Name} took {damage} damage from {hero.Name}. Their health is now {result}.");
+    Console.WriteLine($"{hero.Name} dealt {damage} damage to {enemy.Name}. {enemy.Name}'s health is now {result}.");
     return result;
 }
 
 int EnemyAttack(Enemy enemy, Hero hero)
 {
-    int result = hero.Health - enemy.Attack < 0 ? 0 : hero.Health - enemy.Attack;
-    Console.WriteLine($"{hero.Name} took {enemy.Attack} damage from {enemy.Name}. Their health is now {result}.");
+    int result = hero.CurrentHealth - enemy.Attack < 0 ? 0 : hero.CurrentHealth - enemy.Attack;
+    //Console.WriteLine($"{hero.Name} took {enemy.Attack} damage from {enemy.Name}. Their health is now {result}.");
+    Console.WriteLine($"{enemy.Name} dealt {enemy.Attack} damage to {hero.Name}. {hero.Name}'s health is now {result}.");
     return result;
+}
+
+void RestoreHealth(Hero hero, int amount)
+{
+    if (hero.CurrentHealth + amount > hero.MaxHealth) hero.CurrentHealth = hero.MaxHealth;
+    else hero.CurrentHealth += amount;
+    Console.WriteLine($"{hero.Name} restored {amount} health! {hero.Name}'s health is now {hero.CurrentHealth}.\n");
+
+}
+
+Enemy GenerateRandomEnemy(int enemiesDefeated)
+{
+    string enemyName = string.Format($"Enemydude{enemiesDefeated+1}");
+    int enemyHealth = random.Next(5,21) + enemiesDefeated/5;
+    int enemyAttack = random.Next(1,4) + enemiesDefeated/5;
+    int enemySpeed = random.Next(10,21) + enemiesDefeated/5;
+
+    Enemy enemy = new Enemy(enemyName, enemyHealth, enemyAttack, enemySpeed);
+
+    return enemy;
+    
 }
