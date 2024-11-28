@@ -22,23 +22,22 @@ while (hero.CurrentHealth > 0)
     Enemy enemy = GenerateRandomEnemy(enemiesDefeated);
     Console.WriteLine($"{enemy.Name}'s stats:\nHealth: {enemy.Health}\nAttack: {enemy.Attack}\nSpeed: {enemy.Speed}\n");
     Battle(hero, enemy);
-    if (hero.CurrentHealth > 0) 
+    if (hero.CurrentHealth > 0)
     {
         enemiesDefeated++;
-        RestoreHealth(hero, enemiesDefeated/5 + 1); //increases by one for every 5 enemies defeated
+        RestoreHealth(hero, enemiesDefeated / 5 + 1); //increases by one for every 5 enemies defeated
     }
-
 
     Thread.Sleep(1000);
 
 }
-
-if (enemiesDefeated > 0) Console.WriteLine($"Well done! You defeated {enemiesDefeated} enemies in a row!");
+if (enemiesDefeated == 1) Console.WriteLine($"Well done! You defeated {enemiesDefeated} enemy!");
+else if (enemiesDefeated > 0) Console.WriteLine($"Well done! You defeated {enemiesDefeated} enemies!");
 else Console.WriteLine("Oh no, you didn't defeat any enemies this time...");
 
 void Battle(Hero hero, Enemy enemy)
 {
-    int tiebreaker = -1; 
+    int tiebreaker = -1;
     //practice battle loop
     while (hero.CurrentHealth > 0 && enemy.Health > 0)
     {
@@ -47,9 +46,9 @@ void Battle(Hero hero, Enemy enemy)
             //50-50 chance for hero or enemy to move first
             //if tiebreaker is 0, hero moves first
             //if tiebreaker is 1, enemy moves first
-            tiebreaker = random.Next(0,2);
+            tiebreaker = random.Next(0, 2);
         }
-        
+
         if (hero.Speed > enemy.Speed || tiebreaker == 0)
         {
             enemy.Health = HeroAttack(hero, enemy);
@@ -132,13 +131,13 @@ void RestoreHealth(Hero hero, int amount)
 
 Enemy GenerateRandomEnemy(int enemiesDefeated)
 {
-    string enemyName = string.Format($"Enemydude{enemiesDefeated+1}");
-    int enemyHealth = random.Next(5,21) + enemiesDefeated/5;
-    int enemyAttack = random.Next(1,4) + enemiesDefeated/5;
-    int enemySpeed = random.Next(10,21) + enemiesDefeated/5;
+    string enemyName = string.Format($"Enemydude{enemiesDefeated + 1}");
+    int enemyHealth = random.Next(5, 21) + enemiesDefeated / 5;
+    int enemyAttack = random.Next(1, 4) + enemiesDefeated / 5;
+    int enemySpeed = random.Next(10, 21) + enemiesDefeated / 5;
 
     Enemy enemy = new Enemy(enemyName, enemyHealth, enemyAttack, enemySpeed);
 
     return enemy;
-    
+
 }
