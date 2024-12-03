@@ -1,39 +1,51 @@
 ﻿using Heroes;
 using Enemies;
 using Weapons;
+using Levels;
 
 Random random = new Random();
 
-
 Hero hero = new Hero("Heroman", 10, 2, 15);
-
 
 Weapon staff = new Weapon("staff", 4);
 Weapon sword = new Weapon("sword", 3);
 Weapon bow = new Weapon("bow", 2);
 
-Start(hero);
 int enemiesDefeated = 0;
 
-//multiple battles until hero dies
-while (hero.CurrentHealth > 0)
+Level level = new Level(1);
+level.PrintLevel();
+
+//Start(hero);
+//BattleCycle(hero);
+//Outcome(enemiesDefeated);
+
+void BattleCycle(Hero hero)
 {
-    //generate random enemies
-    Enemy enemy = GenerateRandomEnemy(enemiesDefeated);
-    Console.WriteLine($"{enemy.Name}'s stats:\nHealth: {enemy.Health}\nAttack: {enemy.Attack}\nSpeed: {enemy.Speed}\n");
-    Battle(hero, enemy);
-    if (hero.CurrentHealth > 0)
+    //multiple battles until hero dies
+    while (hero.CurrentHealth > 0)
     {
-        enemiesDefeated++;
-        RestoreHealth(hero, enemiesDefeated / 5 + 1); //increases by one for every 5 enemies defeated
+        //generate random enemies
+        Enemy enemy = GenerateRandomEnemy(enemiesDefeated);
+        Console.WriteLine($"{enemy.Name}'s stats:\nHealth: {enemy.Health}\nAttack: {enemy.Attack}\nSpeed: {enemy.Speed}\n");
+        Battle(hero, enemy);
+        if (hero.CurrentHealth > 0)
+        {
+            enemiesDefeated++;
+            RestoreHealth(hero, enemiesDefeated / 5 + 1); //increases by one for every 5 enemies defeated
+        }
+
+        Thread.Sleep(1000);
+
     }
-
-    Thread.Sleep(1000);
-
 }
-if (enemiesDefeated == 1) Console.WriteLine($"Well done! You defeated {enemiesDefeated} enemy!");
-else if (enemiesDefeated > 0) Console.WriteLine($"Well done! You defeated {enemiesDefeated} enemies!");
-else Console.WriteLine("Oh no, you didn't defeat any enemies this time...");
+
+void Outcome(int enemiesDefeated)
+{
+    if (enemiesDefeated == 1) Console.WriteLine($"Well done! You defeated {enemiesDefeated} enemy!");
+    else if (enemiesDefeated > 0) Console.WriteLine($"Well done! You defeated {enemiesDefeated} enemies!");
+    else Console.WriteLine("Oh no, you didn't defeat any enemies this time...");
+}
 
 void Battle(Hero hero, Enemy enemy)
 {

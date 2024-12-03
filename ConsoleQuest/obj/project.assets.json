@@ -1,10 +1,10 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
+    "net9.0": {
       "Enemy/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "compile": {
           "bin/placeholder/Enemy.dll": {}
         },
@@ -14,7 +14,7 @@
       },
       "Hero/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "Weapon": "1.0.0"
         },
@@ -25,9 +25,19 @@
           "bin/placeholder/Hero.dll": {}
         }
       },
+      "Level/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Level.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Level.dll": {}
+        }
+      },
       "Weapon/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "compile": {
           "bin/placeholder/Weapon.dll": {}
         },
@@ -48,6 +58,11 @@
       "path": "../Hero/Hero.csproj",
       "msbuildProject": "../Hero/Hero.csproj"
     },
+    "Level/1.0.0": {
+      "type": "project",
+      "path": "../Level/Level.csproj",
+      "msbuildProject": "../Level/Level.csproj"
+    },
     "Weapon/1.0.0": {
       "type": "project",
       "path": "../Weapon/Weapon.csproj",
@@ -55,9 +70,10 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": [
+    "net9.0": [
       "Enemy >= 1.0.0",
       "Hero >= 1.0.0",
+      "Level >= 1.0.0",
       "Weapon >= 1.0.0"
     ]
   },
@@ -83,21 +99,24 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net9.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "projectReferences": {
             "C:\\Users\\vladi\\OneDrive\\Документи\\GitHub\\ConsoleQuest\\Enemy\\Enemy.csproj": {
               "projectPath": "C:\\Users\\vladi\\OneDrive\\Документи\\GitHub\\ConsoleQuest\\Enemy\\Enemy.csproj"
             },
             "C:\\Users\\vladi\\OneDrive\\Документи\\GitHub\\ConsoleQuest\\Hero\\Hero.csproj": {
               "projectPath": "C:\\Users\\vladi\\OneDrive\\Документи\\GitHub\\ConsoleQuest\\Hero\\Hero.csproj"
+            },
+            "C:\\Users\\vladi\\OneDrive\\Документи\\GitHub\\ConsoleQuest\\Level\\Level.csproj": {
+              "projectPath": "C:\\Users\\vladi\\OneDrive\\Документи\\GitHub\\ConsoleQuest\\Level\\Level.csproj"
             },
             "C:\\Users\\vladi\\OneDrive\\Документи\\GitHub\\ConsoleQuest\\Weapon\\Weapon.csproj": {
               "projectPath": "C:\\Users\\vladi\\OneDrive\\Документи\\GitHub\\ConsoleQuest\\Weapon\\Weapon.csproj"
@@ -118,8 +137,8 @@
       "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net9.0": {
+        "targetAlias": "net9.0",
         "imports": [
           "net461",
           "net462",
@@ -131,24 +150,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
