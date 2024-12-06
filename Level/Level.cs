@@ -36,31 +36,31 @@ public class Level
             case "easy":
                 rooms['H'] = 4;
                 rooms['W'] = 2;
-                rooms['E'] = ((nonCrucialRooms) - rooms['H'] - rooms['W'])*(1/3);
-                rooms['.'] = (nonCrucialRooms) - rooms['H'] - rooms['W'] - rooms['E'];
+                rooms['E'] = (nonCrucialRooms - rooms['H'] - rooms['W'])/3;
+                rooms['.'] = nonCrucialRooms - rooms['H'] - rooms['W'] - rooms['E'];
                 break;
             case "normal":
                 rooms['H'] = 3;
                 rooms['W'] = 1;
-                rooms['E'] = ((nonCrucialRooms) - rooms['H'] - rooms['W'])*(1/2);
-                rooms['.'] = rooms['E'];
+                rooms['E'] = (nonCrucialRooms - rooms['H'] - rooms['W'])/2;
+                rooms['.'] = nonCrucialRooms - rooms['H'] - rooms['W'] - rooms['E'];
                 break;
             case "hard":
                 rooms['H'] = 1;
                 rooms['W'] = 1;
-                rooms['E'] = ((nonCrucialRooms) - rooms['H'] - rooms['W'])*(2/3);
-                rooms['.'] = (nonCrucialRooms) - rooms['H'] - rooms['W'] - rooms['E'];
+                rooms['E'] = (nonCrucialRooms - rooms['H'] - rooms['W'])*2/3;
+                rooms['.'] = nonCrucialRooms - rooms['H'] - rooms['W'] - rooms['E'];
                 break;
             case "insane":
                 rooms['H'] = 0;
                 rooms['W'] = 1;
-                rooms['E'] = ((nonCrucialRooms) - rooms['H'] - rooms['W'])*(4/5);
-                rooms['.'] = (nonCrucialRooms) - rooms['H'] - rooms['W'] - rooms['E'];
+                rooms['E'] = (nonCrucialRooms - rooms['W'])*4/5;
+                rooms['.'] = nonCrucialRooms - rooms['W'] - rooms['E'];
                 break;
             case "crazy":
                 rooms['H'] = 0;
                 rooms['W'] = 0;
-                rooms['E'] = (nonCrucialRooms) - rooms['H'] - rooms['W'];
+                rooms['E'] = nonCrucialRooms;
                 rooms['.'] = 0;
                 break;
         }

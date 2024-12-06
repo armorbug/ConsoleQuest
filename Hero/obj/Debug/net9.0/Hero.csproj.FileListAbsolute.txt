@@ -1,0 +1,16 @@
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\bin\Debug\net9.0\Hero.deps.json
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\bin\Debug\net9.0\Hero.dll
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\bin\Debug\net9.0\Hero.pdb
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\bin\Debug\net9.0\Weapon.dll
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\bin\Debug\net9.0\Weapon.pdb
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net9.0\Hero.csproj.AssemblyReference.cache
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net9.0\Hero.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net9.0\Hero.AssemblyInfoInputs.cache
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net9.0\Hero.AssemblyInfo.cs
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net9.0\Hero.csproj.CoreCompileInputs.cache
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net9.0\Hero.sourcelink.json
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net9.0\Hero.csproj.Up2Date
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net9.0\Hero.dll
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net9.0\refint\Hero.dll
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net9.0\Hero.pdb
+C:\Users\vladi\OneDrive\Документи\GitHub\ConsoleQuest\Hero\obj\Debug\net9.0\ref\Hero.dll

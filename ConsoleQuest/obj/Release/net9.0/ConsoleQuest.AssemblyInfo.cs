@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConsoleQuest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79efbb4233a5c3e51ecb74a8ac45edd12081bf9b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa35c24147fecc8c1552e3495c276fe38f17fa7f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConsoleQuest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConsoleQuest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
